@@ -28,7 +28,7 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	```
 
 	https://github.com/hayatravis/cake_tutorial/blob/master/config/app.default.php  
-	以下のファイルを同一のconfigディレクトリに `app.php` という名前でコピーしてください。
+	上記のファイルを同一のconfigディレクトリに `app.php` という名前でコピーしてください。
 	
 	https://github.com/hayatravis/cake_tutorial/blob/master/config/app.default.php#L225-L235  
 	app.phpの上記のあたりを各開発環境のDBに合わせて設定してください。
