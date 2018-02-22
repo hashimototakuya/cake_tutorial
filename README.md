@@ -1,51 +1,71 @@
-# CakePHP Application Skeleton
+# CakeTutorial
 
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+cakephpに慣れていただくためのテストリポジトリです。
+このリポジトリを通じてCakePHPに慣れていただきます。
+MVCの概念についてやPHPUnitを使った単体テストや
+DBのスキーマを変更するmigration、自動でソースコードを作成する `bake` コマンド等を
+このリポジトリを通じて学べるように致します。
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
+またgithubを利用しての開発フローにも慣れていただきます。
+- issueの作成
+- ブランチを切ってissueの対応
+- `push` や `merge` の概念
+- PR(PullRequest)のやり方
+- マージ
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
-## Installation
+## 初期設定
+1. git cloneコマンドを利用してこのリポジトリを開発環境にクローンしてください。
+	```shell
+	$ git clone git@github.com:hayatravis/cake_tutorial.git
+	```
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+2. 開発環境に合わせたDBの設定
+	DBにデータベースを作ってください。
+	今回はわかりやすいよう `cake_tutorial` というDBを作成するのが良いと思います。
+	```mysql
+	mysql> CREATE DATABASE cake_tutorial DEFAULT CHARSET = UTF8;
+	```
 
-If Composer is installed globally, run
+	https://github.com/hayatravis/cake_tutorial/blob/master/config/app.default.php  
+	以下のファイルを同一のconfigディレクトリに `app.php` という名前でコピーしてください。
+	
+	https://github.com/hayatravis/cake_tutorial/blob/master/config/app.default.php#L225-L235  
+	app.phpの上記のあたりを各開発環境のDBに合わせて設定してください。
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+3. ブラウザでアクセス
+	vagrant 環境を使っている場合はApacheやNginxの設定を行い、ブラウザからアクセスしてください。  
+	DocumentRootは [webroot](https://github.com/hayatravis/cake_tutorial/tree/master/webroot) このディレクトリにセットしてください。
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
-
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
-
-```bash
-bin/cake server -p 8765
-```
-
-Then visit `http://localhost:8765` to see the welcome page.
-
-## Update
-
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
-
-## Configuration
-
-Read and edit `config/app.php` and setup the `'Datasources'` and any other
-configuration relevant for your application.
-
-## Layout
-
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+	vagrant を利用せずにアクセスする場合は以下のコマンドを叩くと
+	```shell
+	$ bin/cake server
+	```
+	
+	```shell
+	built-in server is running in http://localhost:8765/
+	```
+	このような形のメッセージが出ますので `http://localhost:8765/` こちらのURLでアクセスできるようになります。
+	 
+	Welcome to CakePHP 3.5.12 Red Velvet. Build fast. Grow solid.  
+	みたいな画面が表示されれば成功です。  
+	DBの接続に失敗しているなど設定にミスがあるとコック帽みたいな帽子が赤色になります。
+	
+5. DBにテーブルを作る
+	ソースコードの管理にgitがあるようにDBの管理にもマイグレーションツールという概念があります。
+	今回は私が作ったマイグレーションファイルを実行してテーブルを作成してもらいます。
+	```shell
+	$ bin/cake migrations migrate
+	```
+	このコマンドを叩くとDBに `comments` というテーブルが作成されていると思います。
+	
+6. コメントしてみる
+	今回は超簡易的なコメントシステムを作成しました。  
+	`/comments` にアクセスしてみてください。  
+	緑色ヘッダーの画面が表示されると思います。
+	左上の `New Comment` をクリックして適当にコメントしてみてください。
+	先程の画面にリダイレクトして入力した項目が表示されていると思います。
+	
+	ここまでの実装で実質コードを変更したのは [このファイル](https://github.com/hayatravis/cake_tutorial/blob/master/config/Migrations/20180222112059_AddCommentsTable.php) だけです。
+	あとはCakeの自動作成機能で作られています。  
+	ここまででフレームワークの便利さは伝わったと思います。
