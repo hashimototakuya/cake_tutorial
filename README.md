@@ -15,12 +15,13 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 
 
 ## 初期設定
-1. git cloneコマンドを利用してこのリポジトリを開発環境にクローンしてください。
+1. ローカルにClone  
+	git cloneコマンドを利用してこのリポジトリを開発環境にクローンしてください。
 	```shell
 	$ git clone git@github.com:hayatravis/cake_tutorial.git
 	```
 
-2. 開発環境に合わせたDBの設定
+2. 開発環境に合わせたDBの設定  
 	DBにデータベースを作ってください。
 	今回はわかりやすいよう `cake_tutorial` というDBを作成するのが良いと思います。
 	```mysql
@@ -33,7 +34,7 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	https://github.com/hayatravis/cake_tutorial/blob/master/config/app.default.php#L225-L235  
 	app.phpの上記のあたりを各開発環境のDBに合わせて設定してください。
 
-3. ブラウザでアクセス
+3. ブラウザでアクセス  
 	vagrant 環境を使っている場合はApacheやNginxの設定を行い、ブラウザからアクセスしてください。  
 	DocumentRootは [webroot](https://github.com/hayatravis/cake_tutorial/tree/master/webroot) このディレクトリにセットしてください。
 
@@ -51,7 +52,7 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	みたいな画面が表示されれば成功です。  
 	DBの接続に失敗しているなど設定にミスがあるとコック帽みたいな帽子が赤色になります。
 	
-5. DBにテーブルを作る
+5. DBにテーブルを作る  
 	ソースコードの管理にgitがあるようにDBの管理にもマイグレーションツールという概念があります。
 	今回は私が作ったマイグレーションファイルを実行してテーブルを作成してもらいます。
 	```shell
@@ -59,7 +60,7 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	```
 	このコマンドを叩くとDBに `comments` というテーブルが作成されていると思います。
 	
-6. コメントしてみる
+6. コメントしてみる  
 	今回は超簡易的なコメントシステムを作成しました。  
 	`/comments` にアクセスしてみてください。  
 	緑色ヘッダーの画面が表示されると思います。
