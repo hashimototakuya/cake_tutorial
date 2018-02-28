@@ -20,6 +20,11 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	```shell
 	$ git clone git@github.com:hayatravis/cake_tutorial.git
 	```
+	
+	必要なパッケージをインストールします。
+	```mysql
+	$ composer install
+	 ```
 
 2. 開発環境に合わせたDBの設定  
 	DBにデータベースを作ってください。
