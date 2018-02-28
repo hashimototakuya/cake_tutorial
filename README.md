@@ -21,7 +21,8 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 	$ git clone git@github.com:hayatravis/cake_tutorial.git
 	```
 	
-	必要なパッケージをインストールします。
+	必要なパッケージをインストールします。  
+	(composerのパスは適宜変更してください。 composer.pharや php ./composer.phar等)
 	```mysql
 	$ composer install
 	 ```
