@@ -11,6 +11,7 @@
  * @link          https://cakephp.org CakePHP(tm) Project
  * @since         0.10.0
  * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @var \App\View\AppView $this
  */
 
 $cakeDescription = 'CakePHP: the rapid development php framework';
@@ -41,6 +42,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             </li>
         </ul>
         <div class="top-bar-section">
+            <ul>
+                <li><?= $this->Html->link('会員', ['controller' => 'users', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link('都道府県', ['controller' => 'prefectures', 'action' => 'index']) ?></li>
+                <li><?= $this->Html->link('コメント', ['controller' => 'comments', 'action' => 'index']) ?></li>
+            </ul>
             <ul class="right">
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
