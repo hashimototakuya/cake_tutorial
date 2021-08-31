@@ -7,11 +7,11 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 このリポジトリを通じて学べるように致します。
 
 またgithubを利用しての開発フローにも慣れていただきます。
-URL:https://docs.google.com/presentation/d/1w9hGt1r-prYgHWK9BXpXnPII_oNRUbr-tkVG5_rJvNE/edit#slide=id.p
 - issueの作成
 - ブランチを切ってissueの対応
 - `push` や `merge` の概念
 - PR(PullRequest)のやり方
+URL:https://docs.google.com/presentation/d/1w9hGt1r-prYgHWK9BXpXnPII_oNRUbr-tkVG5_rJvNE/edit#slide=id.p
 
 開発環境の構築がまだの場合
 URL:https://docs.google.com/presentation/d/1XEPvD2cRlxTSOSAmUipbCdDeSyeDjf1XEm_JJHBufFI/edit#slide=id.p
