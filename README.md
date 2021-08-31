@@ -12,10 +12,10 @@ DBのスキーマを変更するmigration、自動でソースコードを作成
 - `push` や `merge` の概念
 - PR(PullRequest)のやり方
 
-URL:https://docs.google.com/presentation/d/1w9hGt1r-prYgHWK9BXpXnPII_oNRUbr-tkVG5_rJvNE/edit#slide=id.p
+URL:https://docs.google.com/presentation/d/1w9hGt1r-prYgHWK9BXpXnPII_oNRUbr-tkVG5_rJvNE/edit?usp=sharing
 
 開発環境の構築がまだの場合
-URL:https://docs.google.com/presentation/d/1XEPvD2cRlxTSOSAmUipbCdDeSyeDjf1XEm_JJHBufFI/edit#slide=id.p
+URL:https://docs.google.com/presentation/d/1XEPvD2cRlxTSOSAmUipbCdDeSyeDjf1XEm_JJHBufFI/edit?usp=sharing
 
 
 
