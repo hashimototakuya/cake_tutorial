@@ -23,7 +23,7 @@ URL:https://docs.google.com/presentation/d/1XEPvD2cRlxTSOSAmUipbCdDeSyeDjf1XEm_J
 1. ローカルにClone  
 	git cloneコマンドを利用してこのリポジトリを開発環境にクローンしてください。
 	```shell
-	$ git clone git@github.com:hayatravis/cake_tutorial.git
+	$ git clone git@github.com:hashimototakuya/cake_tutorial.git
 	```
 	
 	必要なパッケージをインストールします。  
